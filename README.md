@@ -6,3 +6,7 @@ This website was built with the following technology:
 React/Vite - Frontend
 Tailwind - Styling
 JavaScript - Functionality
+
+Proudly designed by VictorFlow Webflow Design and Development Agency.
+File Info:
+Figma file for free. It is free to use for personal and comercial purpose.
