@@ -1,12 +1,14 @@
 import React from 'react'
+import _Footer from './components/sections/_Footer'
+import _Header from './components/sections/_Header'
 
 
 function App() {
     return (
-        <div className='bg-red-500 '>
-            <div className='text-base back'>omo</div>
-            welcome to react and tailwind
-        </div>
+        <main>
+            <_Header/>
+            <_Footer/>
+        </main>
     )
 }
 
