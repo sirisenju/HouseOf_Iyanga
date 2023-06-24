@@ -1,6 +1,30 @@
 import React from "react";
 
 function Home() {
+
+  const priceList = [
+    {
+      id: 1,
+      item: "Full makeup",
+      price: "17.00"
+    },
+    {
+      id: 2,
+      item: "Face mask",
+      price: "7.20"
+    },
+    {
+      id: 3,
+      item: "Eyebrows shapening",
+      price: "11.63"
+    },
+    {
+      id: 4,
+      item: "Hair styling",
+      price: "16.62"
+    }
+  ];
+
   return (
     <main>
       {/*first section start................................................ */}
@@ -128,15 +152,41 @@ function Home() {
               <h2 className="text-3xl font-medium">We are Experienced in making you very Beautiful.</h2>
             </div>
           </div>
-          <div className="bg-green-300 flex">
+          <div className="flex">
             <img className="h-96 w-96 object-cover" src="/contentImage/faceMask1.jpg" alt="" />
-            <div className="bg-red-300 h-96 w-96 relative">price lists
-              <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0"></div>
+            <div className="h-96 w-96 relative">
+            <div className="absolute right-4 top-1">
+                {priceList.map((product) => (
+                  <div key={product.id}>
+                    <div className="max-w-xs border-b-2 py-2">
+                      <ul className="leaders">
+                        <li><span className=" text-lg font-semibold">{product.item}</span> <span className="pl-2 font-medium"> from ${product.price}</span></li>
+                      </ul>
+                      <p>The versions have evolved over the there are</p>
+                    </div>
+                  </div>
+                ))}
+                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">GET AN APPOINTMENT</button>
+              </div>
+              <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0"/>
             </div>
           </div>
-          <div className="bg-green-500 flex ">
-            <div className="bg-red-200 h-96 w-96 relative">price lists
-              <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0"></div>
+          <div className="flex">
+            <div className="h-96 w-96 relative">
+              <div className="pt-14">
+                {priceList.map((product) => (
+                  <div key={product.id}>
+                    <div className="max-w-xs border-b-2 py-2">
+                      <ul className="leaders">
+                        <li><span className=" text-lg font-semibold">{product.item}</span> <span className="pl-2 font-medium"> from ${product.price}</span></li>
+                      </ul>
+                      <p>The versions have evolved over the there are</p>
+                    </div>
+                  </div>
+                ))}
+                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">GET AN APPOINTMENT</button>
+              </div>
+              <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0"/>
             </div>
             <img className="h-96 w-96 object-cover" src="/contentImage/faceMask2.jpg" alt="" />
           </div>
@@ -221,13 +271,13 @@ function Home() {
                 <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none " placeholder="Name" type="text" />
               </div>
               <div className="">
-                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Name" type="text" />
+                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Email" type="email" />
               </div>
               <div className="">
-                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Name" type="text" />
+                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Phone" type="number" />
               </div>
               <div className="">
-                <input className="w-72 mb-3 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Name" type="text" />
+                <input className="w-72 mb-3 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Service You Need" type="text" />
               </div>
               <div className="mb-3">
                 <textarea name="text" id="" className="w-72 h-28 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Any Note For Us?"></textarea>
