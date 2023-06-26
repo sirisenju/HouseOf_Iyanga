@@ -147,8 +147,8 @@ function Home() {
         <div className="xl:w-1/2 max-[850px]:w-full max-[1200px]:p-4 ">
           <div className="flex justify-center">
             <div className="text-center max-w-sm pt-2 pb-4 mb-4">
-              <p className="text-xs text-Secondary-theme">OUR SERVICES</p>
-              <h2 className="text-3xl font-medium">
+              <p className="sm:text-xs max-[639px]:text-sm text-Secondary-theme">OUR SERVICES</p>
+              <h2 className="sm:text-3xl max-[639px]:text-4xl font-medium">
                 We are Experienced in making you very Beautiful.
               </h2>
             </div>
@@ -160,7 +160,7 @@ function Home() {
               alt=""
             />
             <div className="h-96 w-full relative max-[370px]:mb-16">
-              <div className="absolute max-[1400px]:p-3 max-[1400px]:w-full right-4 top-1 max-[1400px]:left-0">
+              <div className="max-[1400px]:p-3 max-[1400px]:w-full">
                 {priceList.map((product) => (
                   <div key={product.id}>
                     <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
@@ -179,7 +179,7 @@ function Home() {
                     </div>
                   </div>
                 ))}
-                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">
+                <button className="text-xs px-4 py-2 border-2 mt-2 ml-4 border-Secondary-theme">
                   GET AN APPOINTMENT
                 </button>
               </div>
@@ -189,7 +189,7 @@ function Home() {
           {/*item 2............................................................................... */}
           <div className="flex max-[1400px]:inline max-[1300px]:w-full mb-10">
             <img
-              className="h-96 max-[1400px]:h-80 min-[1410px]:hidden w-full object-cover"
+              className="h-96 max-[1400px]:h-80 min-[1451px]:hidden w-full object-cover"
               src="/contentImage/faceMask2.jpg"
               alt=""
             />
@@ -213,14 +213,14 @@ function Home() {
                     </div>
                   </div>
                 ))}
-                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">
+                <button className="text-xs px-4 py-2 border-2 mt-2 ml-4 border-Secondary-theme">
                   GET AN APPOINTMENT
                 </button>
               </div>
               <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0 max-[1400px]:hidden" />
             </div>
             <img
-              className="h-96 w-full max-[1400px]:hidden object-cover"
+              className="h-96 w-full max-[1450px]:hidden object-cover"
               src="/contentImage/faceMask2.jpg"
               alt=""
             />
