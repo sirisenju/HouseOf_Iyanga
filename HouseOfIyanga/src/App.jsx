@@ -6,9 +6,11 @@ import Home from "./components/pages/Home";
 function App() {
   return (
     <main>
-      <_Header />
+      {/** <_Header />*/}
       <Home />
       <_Footer />
+      {/**  */}
+      
     </main>
   );
 }

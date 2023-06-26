@@ -1,33 +1,32 @@
 import React from "react";
 
 function Home() {
-
   const priceList = [
     {
       id: 1,
       item: "Full makeup",
-      price: "17.00"
+      price: "17.00",
     },
     {
       id: 2,
       item: "Face mask",
-      price: "7.20"
+      price: "7.20",
     },
     {
       id: 3,
       item: "Eyebrows shapening",
-      price: "11.63"
+      price: "11.63",
     },
     {
       id: 4,
       item: "Hair styling",
-      price: "16.62"
-    }
+      price: "16.62",
+    },
   ];
 
   return (
     <main>
-      {/*first section start................................................ */}
+      {/*first section start................................................ 
       <section className="h-screen flex">
         <div className="w-1/2 bg-Home-bg flex items-center justify-center">
           <div className="max-w-sm p-3">
@@ -58,7 +57,7 @@ function Home() {
       </section>
       {/*first section end................................................ */}
 
-      {/*second section start................................................ */}
+      {/*second section start................................................ 
       <section className="w-full bg-white h-[600px] flex items-center">
         <div className="w-[820px] bg-white mx-auto flex justify-between ">
           <div className="h-80 w-56">
@@ -116,7 +115,7 @@ function Home() {
       </section>
       {/*second section end................................................ */}
 
-      {/*third section start................................................ */}
+      {/*third section start................................................ 
       <section className="w-full bg-Home-bg h-[620px] flex items-center justify-center">
         <div className="flex w-[850px] items-center justify-between">
           <div className="w-1/2 h-full flex items-center justify-center pt-4 pl-5">
@@ -144,66 +143,102 @@ function Home() {
       {/*third section end................................................ */}
 
       {/*fourth section start................................................ */}
-      <section className="w-full h-[140vh] bg-white flex justify-center items-center">
-        <div className="w-1/2">
+      <section className="w-full h-[140%] bg-white flex justify-center items-center overflow-hidden">
+        <div className="xl:w-1/2 max-[850px]:w-full max-[1200px]:p-4 ">
           <div className="flex justify-center">
             <div className="text-center max-w-sm pt-2 pb-4 mb-4">
               <p className="text-xs text-Secondary-theme">OUR SERVICES</p>
-              <h2 className="text-3xl font-medium">We are Experienced in making you very Beautiful.</h2>
+              <h2 className="text-3xl font-medium">
+                We are Experienced in making you very Beautiful.
+              </h2>
             </div>
           </div>
-          <div className="flex">
-            <img className="h-96 w-96 object-cover" src="/contentImage/faceMask1.jpg" alt="" />
-            <div className="h-96 w-96 relative">
-            <div className="absolute right-4 top-1">
+          <div className="flex max-[1400px]:inline max-[1400px]:w-full">
+            <img
+              className="h-96 max-[1400px]:h-80 w-full object-cover"
+              src="/contentImage/faceMask1.jpg"
+              alt=""
+            />
+            <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="absolute max-[1400px]:p-3 max-[1400px]:w-full right-4 top-1 max-[1400px]:left-0">
                 {priceList.map((product) => (
                   <div key={product.id}>
-                    <div className="max-w-xs border-b-2 py-2">
+                    <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
                       <ul className="leaders">
-                        <li><span className=" text-lg font-semibold">{product.item}</span> <span className="pl-2 font-medium"> from ${product.price}</span></li>
+                        <li>
+                          <span className="text-lg font-semibold">
+                            {product.item}
+                          </span>{" "}
+                          <span className="pl-2 font-medium">
+                            {" "}
+                            from ${product.price}
+                          </span>
+                        </li>
                       </ul>
                       <p>The versions have evolved over the there are</p>
                     </div>
                   </div>
                 ))}
-                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">GET AN APPOINTMENT</button>
+                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">
+                  GET AN APPOINTMENT
+                </button>
               </div>
-              <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0"/>
+              <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0 max-[1400px]:hidden" />
             </div>
           </div>
-          <div className="flex">
-            <div className="h-96 w-96 relative">
-              <div className="pt-14">
+          {/*item 2............................................................................... */}
+          <div className="flex max-[1400px]:inline max-[1300px]:w-full mb-10">
+            <img
+              className="h-96 max-[1400px]:h-80 min-[1410px]:hidden w-full object-cover"
+              src="/contentImage/faceMask2.jpg"
+              alt=""
+            />
+            <div className="h-96 w-full relative">
+              <div className="pt-14 max-[1400px]:pt-6 max-[1400px]:p-3 max-[1400px]:w-full pr-6">
                 {priceList.map((product) => (
                   <div key={product.id}>
-                    <div className="max-w-xs border-b-2 py-2">
+                    <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
                       <ul className="leaders">
-                        <li><span className=" text-lg font-semibold">{product.item}</span> <span className="pl-2 font-medium"> from ${product.price}</span></li>
+                        <li>
+                          <span className=" text-lg font-semibold">
+                            {product.item}
+                          </span>{" "}
+                          <span className="pl-2 font-medium">
+                            {" "}
+                            from ${product.price}
+                          </span>
+                        </li>
                       </ul>
                       <p>The versions have evolved over the there are</p>
                     </div>
                   </div>
                 ))}
-                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">GET AN APPOINTMENT</button>
+                <button className="text-xs px-4 py-2 border-2 mt-2 border-Secondary-theme">
+                  GET AN APPOINTMENT
+                </button>
               </div>
-              <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0"/>
+              <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0 max-[1400px]:hidden" />
             </div>
-            <img className="h-96 w-96 object-cover" src="/contentImage/faceMask2.jpg" alt="" />
+            <img
+              className="h-96 w-full max-[1400px]:hidden object-cover"
+              src="/contentImage/faceMask2.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
       {/*fourth section end................................................ */}
 
       {/*fifth section start................................................ */}
-      <section className="w-full h-[60vh] bg-Home-bg flex items-center justify-center">
-        <div className="w-1/2">
+      <section className="w-full h-full max-[920px]:pb-8 bg-Home-bg flex items-center justify-center overflow-hidden">
+        <div className="lg:w-1/2 max-[920px]:w-full p-5">
           <div className="text-center p-7">
-            <p className="text-xs">TESTIMONIALS</p>
-            <h2 className="text-3xl font-medium">What Our Customers says...</h2>
+            <p className="sm:text-xs max-[639px]:text-sm">TESTIMONIALS</p>
+            <h2 className="sm:text-3xl max-[639px]:text-4xl font-medium">What Our Customers says...</h2>
           </div>
-          <div className="flex items-center gap-6">
-            <div className="bg-white h-full w-1/2">
-              <div className="px-6 py-5 text-sm w-full h-full">
+          <div className="flex items-center gap-6 max-[920px]:inline ">
+            <div className="bg-white h-full w-full ">
+              <div className="px-6 py-5 text-lg w-full h-full">
                   “ It is a long established fact 
                 that a reader will be tracked distracted by the readable content of a page is when looking at its layout. 
                 The point of using Lorem of distribution it look like readable English “
@@ -222,8 +257,8 @@ function Home() {
                   </div>
               </div>
             </div>
-            <div className="bg-white h-full w-1/2">
-              <div className="px-6 py-5 text-sm w-full h-full">
+            <div className="bg-white h-full w-full max-[920px]:mt-5">
+              <div className="px-6 py-5 text-lg w-full h-full">
                 <p>“ It is a long established fact 
                   that a reader will be tracked distracted by the readable content of a 
                   page is when looking at its layout. 
@@ -249,40 +284,40 @@ function Home() {
       {/*fifth section end................................................ */}
 
       {/*sixth section start................................................ */}
-      <section className="w-full h-[80vh] bg-white flex justify-center items-center">
-        <div className="bg-Home-bg2 pl-6 w-1/2 gap-7 flex items-center">
-          <div className="w-1/2 h-full"> 
-            <p className="text-xs">FLAT DISCOUNT</p>
-            <h2 className="text-3xl font-medium pt-3">Claim up to 50% offer on the most popular <br />services.....</h2>
-            <p className="text-sm pt-3 pb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
+      <section className="w-full max-[920px]:h-full h-[80vh] max-[1190px]:h-[150vh] bg-white flex justify-center items-center">
+        <div className="bg-Home-bg2 pl-6 w-1/2 lg:w-[60%] max-[1190px]:block max-[1190px]:p-8 max-[720px]:w-full gap-7 flex items-center">
+          <div className="max-w-xs mx-auto h-full max-[1190px]:max-w-lg"> 
+            <p className="sm:text-xs max-[639px]:text-lg">FLAT DISCOUNT</p>
+            <h2 className="sm:text-3xl max-[639px]:text-4xl font-medium pt-3">Claim up to 50% offer on the most popular <br />services.....</h2>
+            <p className="text-lg pt-3 pb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
               alteration in some form, buying to injected humour, or randomised words.</p>
-              <div className="flex justify-between items-center border-2 border-Secondary-theme h-28 w-full">
+              <div className="max-[350px]:inline flex justify-between items-center border-2 max-[350px]:border-0 border-Secondary-theme h-28 w-full">
                 <div >
-                  <span className="">Mail us: beautyness@gmail.com</span>
+                  <span className="text-lg">Mail us: beautyness@gmail.com</span>
                   <br />
-                  <span className="">Call us: +234 983 4564 554 </span>
+                  <span className="text-lg">Call us: +234 983 4564 554 </span>
                 </div>
-                <img className="h-32 w-32 object-contain" src="/contentImage/Offer.png" alt="" />
+                <img className="h-32 max-[280px]:w-full max-[280px]:object-fill w-32 object-contain" src="/contentImage/Offer.png" alt="" />
               </div>
           </div>
-          <div className="bg-Home-bg w-1/2 h-full flex justify-center py-10">
+          <div className="bg-Home-bg lg:w-1/2 max-w-full h-full flex justify-center py-10 max-[1190px]:inline max-[1190px]:pt-8">
             <form action="">
-              <div className="">
-                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none " placeholder="Name" type="text" />
+              <div className="max-[1190px]:pt-8">
+                <input className="w-full py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none " placeholder="Name" type="text" />
               </div>
               <div className="">
-                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Email" type="email" />
+                <input className="w-full py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Email" type="email" />
               </div>
               <div className="">
-                <input className="w-72 py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Phone" type="number" />
+                <input className="w-full py-2 px-2 mb-3 border-2 border-Secondary-theme outline-none" placeholder="Phone" type="number" />
               </div>
               <div className="">
-                <input className="w-72 mb-3 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Service You Need" type="text" />
+                <input className="w-full mb-3 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Service You Need" type="text" />
               </div>
               <div className="mb-3">
-                <textarea name="text" id="" className="w-72 h-28 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Any Note For Us?"></textarea>
+                <textarea name="text" id="" className="w-full h-28 py-2 px-2 outline-none border-2 border-Secondary-theme" placeholder="Any Note For Us?"></textarea>
               </div>
-              <div className="w-72 h-11 bg-Secondary-theme flex items-center justify-center">
+              <div className="w-full lg:w-72 h-11 bg-Secondary-theme flex items-center justify-center">
                 <button className="text-white">
                   GET AN APPOINTMENT
                 </button>
