@@ -115,27 +115,33 @@ function Home() {
       </section>
       {/*second section end................................................ */}
 
-      {/*third section start................................................ 
-      <section className="w-full bg-Home-bg h-[620px] flex items-center justify-center">
-        <div className="flex w-[850px] items-center justify-between">
-          <div className="w-1/2 h-full flex items-center justify-center pt-4 pl-5">
-              <div className="max-w-sm">
-                <p className="text-xs text-Secondary-theme">ABOUT US</p>
-                <h2 className="text-4xl font-medium pb-6 pt-1">The Beauty is about <br /> being Comfortable <br /> in your own skin!</h2>
-                <p className="text-sm pb-3">There are many variations of passages of Lorem Ipsum available, <br /> but the majority have 
-                suffered alteration in some form, buying to <br /> injected humour, or randomised words which don't look 
+      {/*third section start................................................ */}
+      <section className="w-full bg-Home-bg h-[80vh] max-[639px]:h-full flex items-center justify-center overflow-hidden">
+        <div className="flex w-[850px] items-center justify-between max-[639px]:inline max-[639px]:p-4">
+          <div className="w-1/2 min-[692px]:hidden max-[639px]:w-full flex justify-end max-[639px]:justify-start pl-4">
+            <div className="relative">
+              <img className="h-80 w-72 object-cover" src="/contentImage/aboutBG.jpg" alt="" />
+              <img className="h-full w-full object-contain absolute top-5 max-[290px]:top-0 right-5" src="/contentImage/faceskinModel2.jpg" alt="" />
+            </div>
+          </div>
+          <div className="w-1/2 h-full flex items-center justify-center pt-4 pl-5 max-[639px]:inline">
+              <div className="lg:max-w-sm max-[639px]:w-full">
+                <p className="md:text-xs max-[639px]:text-sm text-Secondary-theme pt-4">ABOUT US</p>
+                <h2 className="text-4xl font-medium pb-6 pt-1">The Beauty is about being Comfortable in your own skin!</h2>
+                <p className="md:text-sm max-[639px]:text-lg pb-3">There are many variations of passages of Lorem Ipsum available, but the majority have 
+                suffered alteration in some form, buying to injected humour, or randomised words which don't look 
                 even many desktop publishing packages.</p>
-                <div className="flex justify-between pb-5">
-                  <img className="h-32 w-28 object-contain" src="/contentImage/beautyExperts.png" alt="" />
-                  <img className="h-32 w-28 object-contain" src="/contentImage/greatServices.png" alt="" />
-                  <img className="h-32 w-28 object-contain"  src="/contentImage/genuein.png" alt="" />
+                <div className="flex max-[639px]:justify-between md:gap-3 pb-5 pt-2 max-[364px]:hidden">
+                  <img className="h-32 max-[690px]:w-24 w-28 object-contain" src="/contentImage/beautyExperts.png" alt="" />
+                  <img className="h-32 max-[690px]:w-24 w-28 object-contain" src="/contentImage/greatServices.png" alt="" />
+                  <img className="h-32 max-[690px]:w-24 w-28 object-contain"  src="/contentImage/genuein.png" alt="" />
                 </div>
               </div>
           </div>
-          <div className="w-1/2 flex justify-end">
+          <div className="w-1/2 flex justify-end max-[692px]:hidden pr-4 pl-4">
             <div className="relative">
               <img className="h-80 w-72 object-cover" src="/contentImage/aboutBG.jpg" alt="" />
-              <img className="h-80 w-72 object-cover absolute top-6 right-6" src="/contentImage/faceskinModel2.jpg" alt="" />
+              <img className="h-full w-full object-cover absolute top-4 right-4" src="/contentImage/faceskinModel2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -144,7 +150,7 @@ function Home() {
 
       {/*fourth section start................................................ */}
       <section className="w-full h-[140%] bg-white flex justify-center items-center overflow-hidden">
-        <div className="xl:w-1/2 max-[850px]:w-full max-[1200px]:p-4 ">
+        <div className="xl:w-1/2 max-[850px]:w-full max-[1200px]:p-4">
           <div className="flex justify-center">
             <div className="text-center max-w-sm pt-2 pb-4 mb-4">
               <p className="sm:text-xs max-[639px]:text-sm text-Secondary-theme">OUR SERVICES</p>
@@ -153,14 +159,14 @@ function Home() {
               </h2>
             </div>
           </div>
-          <div className="flex max-[1400px]:inline max-[1400px]:w-full">
+          <div className="flex max-[1400px]:inline max-[1639px]:w-full">
             <img
               className="h-96 max-[1400px]:h-80 w-full object-cover"
               src="/contentImage/faceMask1.jpg"
               alt=""
             />
             <div className="h-96 w-full relative max-[370px]:mb-16">
-              <div className="max-[1400px]:p-3 max-[1400px]:w-full">
+              <div className="max-[1639px]:p-3 max-[1639px]:w-full">
                 {priceList.map((product) => (
                   <div key={product.id}>
                     <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
@@ -189,18 +195,18 @@ function Home() {
           {/*item 2............................................................................... */}
           <div className="flex max-[1400px]:inline max-[1300px]:w-full mb-10">
             <img
-              className="h-96 max-[1400px]:h-80 min-[1451px]:hidden w-full object-cover"
+              className="h-96 max-[1400px]:h-80 min-[1461px]:hidden w-full object-cover"
               src="/contentImage/faceMask2.jpg"
               alt=""
             />
-            <div className="h-96 w-full relative">
+            <div className="h-96 w-full relative max-[370px]:mb-16">
               <div className="pt-14 max-[1400px]:pt-6 max-[1400px]:p-3 max-[1400px]:w-full pr-6">
                 {priceList.map((product) => (
                   <div key={product.id}>
                     <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
                       <ul className="leaders">
                         <li>
-                          <span className=" text-lg font-semibold">
+                          <span className="text-lg font-semibold">
                             {product.item}
                           </span>{" "}
                           <span className="pl-2 font-medium">
@@ -220,7 +226,7 @@ function Home() {
               <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0 max-[1400px]:hidden" />
             </div>
             <img
-              className="h-96 w-full max-[1450px]:hidden object-cover"
+              className="h-96 w-full max-[1460px]:hidden object-cover"
               src="/contentImage/faceMask2.jpg"
               alt=""
             />
@@ -231,7 +237,7 @@ function Home() {
 
       {/*fifth section start................................................ */}
       <section className="w-full h-full max-[920px]:pb-8 bg-Home-bg flex items-center justify-center overflow-hidden">
-        <div className="lg:w-1/2 max-[920px]:w-full p-5">
+        <div className="lg:max-w-5xl max-[920px]:w-full p-5">
           <div className="text-center p-7">
             <p className="sm:text-xs max-[639px]:text-sm">TESTIMONIALS</p>
             <h2 className="sm:text-3xl max-[639px]:text-4xl font-medium">What Our Customers says...</h2>
