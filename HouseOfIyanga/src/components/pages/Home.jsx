@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <main>
-      {/*first section start................................................ 
+      {/*first section start................................................ */}
       <section className="h-screen flex">
         <div className="w-1/2 bg-Home-bg flex items-center justify-center">
           <div className="max-w-sm p-3">
@@ -58,55 +58,55 @@ function Home() {
       {/*first section end................................................ */}
 
       {/*second section start................................................ 
-      <section className="w-full bg-white h-[600px] flex items-center">
-        <div className="w-[820px] bg-white mx-auto flex justify-between ">
-          <div className="h-80 w-56">
+      <section className="w-full bg-white max-[520px]:h-full md:h-[600px] flex items-center">
+        <div className="w-[820px] bg-white mx-auto flex justify-between max-[520px]:inline p-4">
+          <div className="h-80 w-56 max-[520px]:w-full mb-28">
             <img
-              className="object-contain h-1/2"
+              className="h-1/2 w-full object-cover max-[520px]:object-center max-[520px]:object-cover max-[520px]:h-3/4"
               src="/contentImage/spa.jpg"
               alt=""
             />
-            <div className="">
-              <h2 className="text-2xl font-medium pt-2 pb-1">Spa & Massage</h2>
-              <p className="text-sm pb-2">
+            <div className="max-w-md">
+              <h2 className="max-[520px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Spa & Massage</h2>
+              <p className="max-[520px]:text-lg sm:text-sm pb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
                 eum aut cum?
               </p>
-              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs">
+              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[520px]:text-sm">
                 Read More
               </button>
             </div>
           </div>
-          <div className="h-80 w-56">
+          <div className="h-80 w-56 max-[520px]:w-full mb-28">
             <img
-              className="object-contain h-1/2"
+              className="h-1/2 w-full object-cover max-[520px]:object-center max-[520px]:object-cover max-[520px]:h-3/4"
               src="/contentImage/hair.jpg"
               alt=""
             />
-            <div className="">
-              <h2 className="text-2xl font-medium pt-2 pb-1">Hair & Beauty</h2>
-              <p className="text-sm pb-2">
+            <div className="max-w-md">
+              <h2 className="max-[520px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Hair & Beauty</h2>
+              <p className="max-[520px]:text-lg sm:text-sm pb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
                 eum aut cum?
               </p>
-              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs">
+              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[520px]:text-sm">
                 Read More
               </button>
             </div>
           </div>
-          <div className="h-80 w-56">
+          <div className="h-80 w-56 max-[520px]:w-full mb-28">
             <img
-              className="object-contain h-1/2"
+              className="h-1/2 w-full object-cover max-[520px]:object-center max-[520px]:object-cover max-[520px]:h-3/4"
               src="/contentImage/bodyTreatment.jpg"
               alt=""
             />
-            <div>
-              <h2 className="text-2xl font-medium pt-2 pb-1">Body Treatment</h2>
-              <p className="text-sm pb-2">
+            <div className="max-w-md">
+              <h2 className="max-[520px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Body Treatment</h2>
+              <p className="max-[520px]:text-lg sm:text-sm pb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
                 eum aut cum?
               </p>
-              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs">
+              <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[520px]:text-sm">
                 Read More
               </button>
             </div>
@@ -115,7 +115,7 @@ function Home() {
       </section>
       {/*second section end................................................ */}
 
-      {/*third section start................................................ */}
+      {/*third section start................................................ 
       <section className="w-full bg-Home-bg h-[80vh] max-[639px]:h-full flex items-center justify-center overflow-hidden">
         <div className="flex w-[850px] items-center justify-between max-[639px]:inline max-[639px]:p-4">
           <div className="w-1/2 min-[692px]:hidden max-[639px]:w-full flex justify-end max-[639px]:justify-start pl-4">
@@ -148,7 +148,7 @@ function Home() {
       </section>
       {/*third section end................................................ */}
 
-      {/*fourth section start................................................ */}
+      {/*fourth section start................................................ 
       <section className="w-full h-[140%] bg-white flex justify-center items-center overflow-hidden">
         <div className="xl:w-1/2 max-[850px]:w-full max-[1200px]:p-4">
           <div className="flex justify-center">
@@ -192,7 +192,7 @@ function Home() {
               <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0 max-[1400px]:hidden" />
             </div>
           </div>
-          {/*item 2............................................................................... */}
+          {/*item 2............................................................................... 
           <div className="flex max-[1400px]:inline max-[1300px]:w-full mb-10">
             <img
               className="h-96 max-[1400px]:h-80 min-[1461px]:hidden w-full object-cover"
@@ -235,7 +235,7 @@ function Home() {
       </section>
       {/*fourth section end................................................ */}
 
-      {/*fifth section start................................................ */}
+      {/*fifth section start................................................ 
       <section className="w-full h-full max-[920px]:pb-8 bg-Home-bg flex items-center justify-center overflow-hidden">
         <div className="lg:max-w-5xl max-[920px]:w-full p-5">
           <div className="text-center p-7">
@@ -289,7 +289,7 @@ function Home() {
       </section>
       {/*fifth section end................................................ */}
 
-      {/*sixth section start................................................ */}
+      {/*sixth section start................................................ 
       <section className="w-full max-[920px]:h-full h-[80vh] max-[1190px]:h-[150vh] bg-white flex justify-center items-center">
         <div className="bg-Home-bg2 pl-6 w-1/2 lg:w-[60%] max-[1190px]:block max-[1190px]:p-8 max-[720px]:w-full gap-7 flex items-center">
           <div className="max-w-xs mx-auto h-full max-[1190px]:max-w-lg"> 
