@@ -15,7 +15,7 @@ function HamburgerComponent() {
         setIsOpen(false);
       }}
     >
-      <div className="relative">
+      <div>
         <Hamburger
           size={25}
           toggled={isOpen}
@@ -24,23 +24,23 @@ function HamburgerComponent() {
           color="#111E22"
         />
         {isOpen && (
-          <div className="absolute bg-indigo-300 h-max w-60 right-2 mt-2 top-14 py-4 rounded-md">
+          <div className="absolute bg-indigo-300 h-fit w-[100%] right-0 mt-2 top-16 z-50">
             <div className="">
-              <div className="font-manrope text-3xl text-center border-b-2 border-black block px-4 py-2 text-white hover:bg-indigo-100">
+              <div className="font-manrope text-3xl text-center border-black block px-4 py-2 text-white hover:bg-indigo-100">
                 Home
               </div>
-              <div className="font-manrope text-3xl text-center border-b-2 border-black block px-4 py-2 text-white hover:bg-indigo-100">
+              <div className="font-manrope text-3xl text-center border-black block px-4 py-2 text-white hover:bg-indigo-100">
                 About
               </div>
-              <div className="font-manrope text-3xl text-center border-b-2 border-black block px-4 py-2 text-white hover:bg-indigo-100">
+              <div className="font-manrope text-3xl text-center border-black block px-4 py-2 text-white hover:bg-indigo-100">
                 Services
               </div>
-              <div className="font-manrope text-3xl text-center border-b-2 border-black block px-4 py-2 text-white hover:bg-indigo-100">
+              <div className="font-manrope text-3xl text-center border-black block px-4 py-2 text-white hover:bg-indigo-100">
                 Contact
               </div>
               <div className="flex justify-center items-center">
                 <button
-                  className="bg-Primary-theme px-7 py-1 font-manrope "
+                  className="px-7 py-2 font-manrope mt-4 mb-8 border-2 rounded-full border-Footer-theme"
                   onCdivck={"#"}
                 >
                   RESERVATION
