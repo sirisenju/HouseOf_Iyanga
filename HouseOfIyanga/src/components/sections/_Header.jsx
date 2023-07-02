@@ -1,5 +1,6 @@
 import React from "react";
 import HamburgerComponent from "../HamburgerComponent";
+import { Link } from "react-router-dom";
 
 function _Header() {
   return (
@@ -7,9 +8,9 @@ function _Header() {
       <p className="text-4xl md:text-5xl">Beautyness.</p>
       <div className="hidden md:flex">
         <div className="flex justify-center items-center mr-7">
-          <div className="pr-6 font-manrope text-lg">Home</div>
-          <div className="pr-6 font-manrope text-lg">About</div>
-          <div className="pr-6 font-manrope text-lg">Services</div>
+          <Link className="pr-6 font-manrope text-lg" to={"/"}>Home</Link>
+          <Link className="pr-6 font-manrope text-lg" to={"/about"}>About</Link>
+          <Link className="pr-6 font-manrope text-lg" to={"/service"}>Services</Link>
           <div className="pr-6 font-manrope text-lg">Contact</div>
         </div>
         <button

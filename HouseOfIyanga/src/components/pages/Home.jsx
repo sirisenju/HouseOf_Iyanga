@@ -1,4 +1,6 @@
 import React from "react";
+import _Header from "../sections/_Header";
+import _Footer from "../sections/_Footer";
 
 function Home() {
   const priceList = [
@@ -25,7 +27,8 @@ function Home() {
   ];
 
   return (
-    <main className="overflow-hidden pt-[80px]">
+    <section>
+      <main className="overflow-hidden pt-[80px]">
       {/*first section start................................................ */}
       <section className="h-screen max-[767px]:h-full flex">
         <div className="w-1/2 bg-Home-bg flex items-center justify-center max-[767px]:hidden">
@@ -349,6 +352,7 @@ function Home() {
       </section>
       {/*sixth section end................................................ */}
     </main>
+    </section>
   );
 }
 
