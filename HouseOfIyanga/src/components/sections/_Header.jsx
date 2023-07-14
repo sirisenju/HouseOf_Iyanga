@@ -15,7 +15,7 @@ function _Header() {
         </div>
         <button
           className="bg-Primary-theme px-7 py-1 font-manrope"
-          onCdivck={"#"}
+          onClick={"#"}
         >
           RESERVATION
         </button>
