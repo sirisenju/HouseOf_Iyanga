@@ -42,13 +42,13 @@ function Services() {
                 </h2>
               </div>
             </div>
-            <div className="flex max-[1400px]:inline max-[1639px]:w-full">
+            <div className="flex flex-col min-[1400px]:flex-row max-[1639px]:w-full">
               <img
-                className="h-96 max-[1400px]:h-80 w-full object-cover"
+                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask1.jpg"
                 alt=""
               />
-              <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
                 <div className="max-[1639px]:p-3 max-[1639px]:w-full">
                   {priceList.map((product) => (
                     <div key={product.id}>
@@ -76,13 +76,13 @@ function Services() {
               </div>
             </div>
             {/*item 2............................................................................... */}
-            <div className="flex max-[1400px]:inline max-[1300px]:w-full">
+            <div className="flex flex-col min-[1400px]:flex-row-reverse">
               <img
-                className="h-96 max-[1400px]:h-80 min-[1461px]:hidden w-full object-cover"
+                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask2.jpg"
                 alt=""
               />
-              <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
                 <div className="pt-14 max-[1400px]:pt-6 max-[1400px]:p-3 max-[1400px]:w-full pr-6">
                   {priceList.map((product) => (
                     <div key={product.id}>
@@ -108,20 +108,15 @@ function Services() {
                 </div>
                 <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0 max-[1400px]:hidden" />
               </div>
-              <img
-                className="h-96 w-full max-[1460px]:hidden object-cover"
-                src="/contentImage/faceMask2.jpg"
-                alt=""
-              />
             </div>
             {/*item 3............................................................................... */}
-            <div className="flex max-[1400px]:inline max-[1639px]:w-full">
+            <div className="flex flex-col min-[1400px]:flex-row max-[1639px]:w-full">
               <img
-                className="h-96 max-[1400px]:h-80 w-full object-cover"
+                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask1.jpg"
                 alt=""
               />
-              <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
                 <div className="max-[1639px]:p-3 max-[1639px]:w-full">
                   {priceList.map((product) => (
                     <div key={product.id}>
@@ -150,13 +145,13 @@ function Services() {
             </div>
 
             {/*item 4............................................................................... */}
-            <div className="flex max-[1400px]:inline max-[1300px]:w-full">
+            <div className="flex flex-col min-[1400px]:flex-row-reverse">
               <img
-                className="h-96 max-[1400px]:h-80 min-[1461px]:hidden w-full object-cover"
+                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask2.jpg"
                 alt=""
               />
-              <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
                 <div className="pt-14 max-[1400px]:pt-6 max-[1400px]:p-3 max-[1400px]:w-full pr-6">
                   {priceList.map((product) => (
                     <div key={product.id}>
@@ -182,20 +177,15 @@ function Services() {
                 </div>
                 <div className="h-14 w-14 bg-Secondary-theme absolute top-0 right-0 max-[1400px]:hidden" />
               </div>
-              <img
-                className="h-96 w-full max-[1460px]:hidden object-cover"
-                src="/contentImage/faceMask2.jpg"
-                alt=""
-              />
             </div>
             {/*item 5............................................................................... */}
-            <div className="flex max-[1400px]:inline max-[1639px]:w-full">
+            <div className="flex flex-col min-[1400px]:flex-row max-[1639px]:w-full">
               <img
-                className="h-96 max-[1400px]:h-80 w-full object-cover"
+                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask1.jpg"
                 alt=""
               />
-              <div className="h-96 w-full relative max-[370px]:mb-16">
+              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
                 <div className="max-[1639px]:p-3 max-[1639px]:w-full">
                   {priceList.map((product) => (
                     <div key={product.id}>

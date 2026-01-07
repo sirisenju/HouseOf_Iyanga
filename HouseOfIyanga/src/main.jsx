@@ -5,26 +5,38 @@ import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import About from './components/pages/About.jsx'
 import Services from './components/pages/Services.jsx'
+import Gallery from './components/pages/Gallery.jsx'
+import { ReservationProvider } from './context/ReservationContext.jsx'
+import ReservationModal from './components/ui/ReservationModal.jsx'
+
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <App/>
+      element: <App />
     },
     {
       path: "/about",
-      element: <About/>
+      element: <About />
     },
     {
       path: "/service",
-      element: <Services/>
+      element: <Services />
     },
+    {
+      path: "/gallery",
+      element: <Gallery />
+    },
+
   ]
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ReservationProvider>
+      <RouterProvider router={router} />
+      <ReservationModal />
+    </ReservationProvider>
   </React.StrictMode>,
 )

@@ -8,8 +8,8 @@ function App() {
   return (
     <main>
       <_Header />
-      {/** <Home /> */}
-        <AppointmentPage/>
+      <Home />
+      <AppointmentPage />
       <_Footer />
     </main>
   );
