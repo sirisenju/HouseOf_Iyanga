@@ -16,7 +16,7 @@ function About() {
             <div className="max-w-xl mx-auto text-center">
               <p className="text-xs text-white">SHORT STORY ABOUT US.</p>
               <h2 className="font-medium text-3xl pt-6 pb-6 text-white">
-                THE BIG STORY BEHIND OUR BEAUTYNESS CENTER
+                THE BIG STORY BEHIND HOUSE OF IYANGA
               </h2>
               <button className="px-6 py-2 bg-Primary-theme text-white text-sm">
                 MAKE A RESERVATION
@@ -44,8 +44,8 @@ function About() {
               <div className="pl-2 pb-6">
                 <h3 className="font-medium text-xl pt-1">Beauty Experts.</h3>
                 <p className="text-sm pt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  eveniet fuga voluptatum consectetur! Rerum!
+                  Our certified makeup artists and estheticians stay current on trends,
+                  techniques, and products—bringing runway-quality artistry to every appointment.
                 </p>
               </div>
             </div>
@@ -58,8 +58,8 @@ function About() {
               <div className="pl-2 pb-6">
                 <h3 className="font-medium text-xl pt-1">Great Services.</h3>
                 <p className="text-sm pt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  eveniet fuga voluptatum consectetur! Rerum!
+                  From consultation to final touch-up, we deliver attentive, hygienic service
+                  in a calm, welcoming space designed for your comfort.
                 </p>
               </div>
             </div>
@@ -70,10 +70,10 @@ function About() {
                 alt=""
               />
               <div className="pl-2 pb-6">
-                <h3 className="font-medium text-xl pt-1">Great Services.</h3>
+                <h3 className="font-medium text-xl pt-1">Genuine Care.</h3>
                 <p className="text-sm pt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  eveniet fuga voluptatum consectetur! Rerum!
+                  We use only trusted, dermatologist-approved products and honest recommendations—
+                  never upselling, always what your skin actually needs.
                 </p>
               </div>
             </div>
@@ -96,9 +96,9 @@ function About() {
                   Style is a Reflection of your Attitude & your Personality.
                 </h2>
                 <p className="text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-                  iure quam neque ducimus expedita quae laborum maxime molestias
-                  incidunt dolore, soluta tempora nisi optio commodi vel qui!
+                  Founded on the belief that every woman deserves to feel stunning in her own skin,
+                  House of Iyanga blends African beauty traditions with modern makeup artistry.
+                  Our studio is a space where color, confidence, and craftsmanship come together.
                 </p>
               </div>
             </div>
@@ -122,14 +122,12 @@ function About() {
                 alt=""
               />
               <div className="w-full pl-12 pr-4 pt-4">
-                <h3 className="text-sm">CEO BEAUTYNESS.</h3>
+                <h3 className="text-sm">FOUNDER, HOUSE OF IYANGA</h3>
                 <p className="pt-2 pb-2 font-medium text-4xl">Sherlin D’Cruz</p>
                 <p className="pb-3 text-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                  impedit beatae quia quae aliquam accusantium minima porro
-                  tenetur quos eum consequuntur dicta facilis cum hic cupiditate
-                  nulla quis ab itaque quo, esse voluptate fugiat amet sint
-                  eius.
+                  Sherlin founded House of Iyanga with one mission: to make professional makeup artistry
+                  accessible, personal, and unforgettable. With over a decade of experience in bridal glam,
+                  editorial shoots, and everyday beauty, she leads a team dedicated to enhancing—not masking—your natural features.
                 </p>
                 <div className="flex gap-4">
                   <img
@@ -182,10 +180,8 @@ function About() {
                 Follow us on <br /> Instagram.
               </h2>
               <p className="pb-10 text-md pr-3">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus, illum ad, assumenda consectetur saepe impedit
-                optio perferendis possimus ab omnis sunt doloribus, maxime
-                voluptatum explicabo? Alias.
+                See our latest bridal transformations, soft glam looks, and behind-the-scenes studio moments.
+                Tag us in your photos—we love celebrating your glow-up with our community.
               </p>
 
               <img

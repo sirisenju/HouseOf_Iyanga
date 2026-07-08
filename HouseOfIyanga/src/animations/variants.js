@@ -17,18 +17,3 @@ export const staggerContainer = {
         }
     }
 };
-
-export const hoverBounce = {
-    scale: 1.05,
-    filter: "grayscale(0%)", // Specific requirement: Grayscale to Full Color (optional but requested)
-    transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10
-    }
-};
-
-export const imageInitial = {
-    filter: "grayscale(100%)", // Start grayscale
-    scale: 1
-}

@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import _Header from "../sections/_Header";
 import _Footer from "../sections/_Footer";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, hoverBounce, imageInitial } from "../../animations/variants";
+import { fadeInUp, staggerContainer } from "../../animations/variants";
 
 function Home() {
   const priceList = [
@@ -10,21 +10,25 @@ function Home() {
       id: 1,
       item: "Full makeup",
       price: "17.00",
+      description: "Flawless foundation, contour, and finishing for weddings, events, or nights out.",
     },
     {
       id: 2,
       item: "Face mask",
       price: "7.20",
+      description: "Deep-cleansing treatments that hydrate, brighten, and revive tired skin.",
     },
     {
       id: 3,
-      item: "Eyebrows shapening",
+      item: "Eyebrows shaping",
       price: "11.63",
+      description: "Precision shaping and tinting to frame your face and define your look.",
     },
     {
       id: 4,
       item: "Hair styling",
       price: "16.62",
+      description: "Blowouts, updos, and event-ready styles finished with heat protection.",
     },
   ];
 
@@ -55,8 +59,8 @@ function Home() {
                   Beauty is power. A smile is its sword.
                 </motion.h1>
                 <motion.p variants={fadeInUp} className="text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam quod id modi.
+                  From bridal glam to everyday elegance, our certified artists craft
+                  looks that highlight your natural beauty with premium, skin-friendly products.
                 </motion.p>
                 <div className="pt-6 pb-2">
                   <motion.button variants={fadeInUp} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-6 py-2 bg-Secondary-theme text-white">
@@ -68,22 +72,20 @@ function Home() {
           </div>
           <div className="bg-cover max-[767px]:w-full w-1/2 h-full flex items-center max-[767px]:inline pt-10 max-[767px]:p-4" style={{ backgroundImage: "url('/contentImage/bgImg1.jpg')" }}>
             <div className="h-96 max-[767px]:w-full w-72 border-8 border-l-0 border-white flex items-center relative z-10">
-              <motion.img
-                initial={imageInitial}
-                whileHover={hoverBounce}
-                className="object-contain h-72 w-full absolute max-[767px]:right-7 sm:right-10 origin-center cursor-pointer"
-                src="/contentImage/faceskinModel.jpg"
-                alt=""
+              <img
+                className="object-contain h-72 sm:h-[430px] w-full absolute max-[767px]:right-7 sm:right-10 origin-center"
+                src="/galleryImages/img2.jpeg"
+                alt="House of Iyanga makeup look"
               />
             </div>
             <div className="max-w-md pt-4 md:hidden">
-              <p className="text-sm sm:text-xs text-Secondary-theme">WELCOME TO BEAUTYNESS!</p>
+              <p className="text-sm sm:text-xs text-Secondary-theme">WELCOME TO HOUSE OF IYANGA!</p>
               <h1 className="text-5xl font-medium pb-6 pt-2 text-white">
                 Beauty is power. A smile is its sword.
               </h1>
               <p className="text-2xl text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam quod id modi.
+                From bridal glam to everyday elegance, our certified artists craft
+                looks that highlight your natural beauty with premium, skin-friendly products.
               </p>
               <div className="pt-6 pb-2">
                 <button className="px-6 py-2 bg-Secondary-theme text-white text-lg">
@@ -96,7 +98,7 @@ function Home() {
         {/*first section end................................................ */}
 
         {/*second section start................................................ */}
-        <section className="w-full bg-white max-[767px]:h-full md:h-[600px] flex items-center overflow-hidden">
+        <section className="w-full bg-white max-[767px]:h-full md:h-[550px] flex items-center overflow-hidden p-4">
           {/* Carousel Container */}
           <motion.div
             ref={carouselRef}
@@ -112,21 +114,19 @@ function Home() {
               viewport={{ once: true, amount: 0.2 }}
             >
               {/* Item 1 */}
-              <motion.div variants={fadeInUp} className="h-80 w-56 max-[767px]:w-full mb-28 flex-shrink-0">
-                <div className="overflow-hidden h-1/2 w-full mb-2">
-                  <motion.img
-                    initial={imageInitial}
-                    whileHover={hoverBounce}
+              <motion.div variants={fadeInUp} className="h-full sm:h-80 w-56 max-[767px]:w-full mb-10 flex-shrink-0">
+                <div className="overflow-hidden h-[280px] sm:h-1/2 w-full mb-2">
+                  <img
                     className="h-full w-full object-cover max-[767px]:object-center max-[767px]:object-cover"
                     src="/contentImage/spa.jpg"
-                    alt=""
+                    alt="Spa and massage treatment"
                   />
                 </div>
                 <div className="max-w-md">
                   <h2 className="max-[767px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Spa & Massage</h2>
                   <p className="max-[767px]:text-lg sm:text-sm pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                    eum aut cum?
+                    Restore balance with soothing massage and aromatherapy treatments
+                    designed to melt stress and leave your skin glowing.
                   </p>
                   <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[767px]:text-sm">
                     Read More
@@ -135,21 +135,19 @@ function Home() {
               </motion.div>
 
               {/* Item 2 */}
-              <motion.div variants={fadeInUp} className="h-80 w-56 max-[767px]:w-full mb-28 flex-shrink-0">
-                <div className="overflow-hidden h-1/2 w-full mb-2">
-                  <motion.img
-                    initial={imageInitial}
-                    whileHover={hoverBounce}
+              <motion.div variants={fadeInUp} className="h-full sm:h-80 w-56 max-[767px]:w-full flex-shrink-0 mb-2">
+                <div className="overflow-hidden h-[280px] sm:h-1/2 w-full mb-2">
+                  <img
                     className="h-full w-full object-cover max-[767px]:object-center max-[767px]:object-cover"
                     src="/contentImage/hair.jpg"
-                    alt=""
+                    alt="Hair and beauty styling"
                   />
                 </div>
                 <div className="max-w-md">
                   <h2 className="max-[767px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Hair & Beauty</h2>
                   <p className="max-[767px]:text-lg sm:text-sm pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                    eum aut cum?
+                    Precision cuts, blowouts, and styling for every texture—finished
+                    with expert color matching and heat protection.
                   </p>
                   <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[767px]:text-sm">
                     Read More
@@ -158,21 +156,19 @@ function Home() {
               </motion.div>
 
               {/* Item 3 */}
-              <motion.div variants={fadeInUp} className="h-80 w-56 max-[767px]:w-full mb-28 flex-shrink-0">
-                <div className="overflow-hidden h-1/2 w-full mb-2">
-                  <motion.img
-                    initial={imageInitial}
-                    whileHover={hoverBounce}
+              <motion.div variants={fadeInUp} className="h-full sm:h-80 w-56 max-[767px]:w-full flex-shrink-0">
+                <div className="overflow-hidden h-[280px] sm:h-1/2 w-full mb-2">
+                  <img
                     className="h-full w-full object-cover max-[767px]:object-center max-[767px]:object-cover"
                     src="/contentImage/bodyTreatment.jpg"
-                    alt=""
+                    alt="Body treatment service"
                   />
                 </div>
                 <div className="max-w-md">
                   <h2 className="max-[767px]:text-3xl sm:text-2xl font-medium pt-2 pb-1">Body Treatment</h2>
                   <p className="max-[767px]:text-lg sm:text-sm pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                    eum aut cum?
+                    Exfoliating scrubs, detox wraps, and nourishing body rituals
+                    that smooth, firm, and revive from head to toe.
                   </p>
                   <button className="px-5 py-2 border-2 rounded-sm border-Secondary-theme text-xs max-[767px]:text-sm">
                     Read More
@@ -197,9 +193,9 @@ function Home() {
               <div className="lg:max-w-sm max-[639px]:w-full">
                 <p className="md:text-xs max-[639px]:text-sm text-Secondary-theme pt-4">ABOUT US</p>
                 <h2 className="text-4xl font-medium pb-6 pt-1">The Beauty is about being Comfortable in your own skin!</h2>
-                <p className="md:text-sm max-[639px]:text-lg pb-3">There are many variations of passages of Lorem Ipsum available, but the majority have
-                  suffered alteration in some form, buying to injected humour, or randomised words which don't look
-                  even many desktop publishing packages.</p>
+                <p className="md:text-sm max-[639px]:text-lg pb-3">At House of Iyanga, we believe beauty starts with confidence. Our studio offers
+                  personalized consultations, cruelty-free cosmetics, and techniques tailored to your skin tone,
+                  features, and style—whether you are preparing for a special event or treating yourself to everyday care.</p>
                 <div className="flex max-[639px]:justify-between md:gap-3 pb-5 pt-2 max-[364px]:hidden">
                   <img className="h-32 max-[690px]:w-24 w-28 object-contain" src="/contentImage/beautyExperts.png" alt="" />
                   <img className="h-32 max-[690px]:w-24 w-28 object-contain" src="/contentImage/greatServices.png" alt="" />
@@ -231,12 +227,12 @@ function Home() {
             {/*item 1............................................................................... */}
             <div className="flex flex-col min-[1400px]:flex-row max-[1639px]:w-full">
               <img
-                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
+                className="max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask1.jpg"
                 alt=""
               />
-              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
-                <div className="max-[1639px]:p-3 max-[1639px]:w-full">
+              <div className="h-full min-h-[30rem] w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16 flex flex-col">
+                <div className="max-[1639px]:p-3 max-[1639px]:w-full flex-1">
                   {priceList.map((product) => (
                     <div key={product.id}>
                       <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
@@ -251,31 +247,32 @@ function Home() {
                             </span>
                           </li>
                         </ul>
-                        <p>The versions have evolved over the there are</p>
+                        <p>{product.description}</p>
                       </div>
                     </div>
                   ))}
-                  <button className="text-xs px-4 py-2 border-2 mt-2 ml-4 border-Secondary-theme">
+                </div>
+                <div className="pt-4 pb-2 flex">
+                  <button className="text-xs px-4 py-2 border-2 border-Secondary-theme mx-auto">
                     GET AN APPOINTMENT
                   </button>
                 </div>
                 <div className="h-14 w-14 bg-Secondary-theme absolute bottom-0 left-0 max-[1400px]:hidden" />
               </div>
             </div>
+      
             {/*item 2............................................................................... */}
-            <div className="flex flex-col min-[1400px]:flex-row-reverse mb-10">
-              <motion.img
-                initial={imageInitial}
-                whileHover={hoverBounce}
-                className="h-96 max-[1400px]:h-80 w-full min-[1400px]:w-1/2 object-cover origin-center"
+            <div className="flex flex-col min-[1400px]:flex-row-reverse mb-14">
+              <img
+                className="max-[1400px]:h-auto w-full min-[1400px]:w-1/2 object-cover"
                 src="/contentImage/faceMask2.jpg"
                 alt=""
               />
-              <div className="h-96 w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16">
-                <div className="pt-14 max-[1400px]:pt-6 max-[1400px]:p-3 max-[1400px]:w-full pr-6">
+              <div className="w-full min-[1400px]:w-1/2 relative max-[370px]:mb-16 flex flex-col" style={{ height: "auto", minHeight: "24rem" }}>
+                <div className="max-[1639px]:p-2 max-[1639px]:w-full mt-10">
                   {priceList.map((product) => (
                     <div key={product.id}>
-                      <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-4">
+                      <div className="w-full 2xl:max-w-lg border-b-2 py-1 lg:pl-2">
                         <ul className="leaders">
                           <li>
                             <span className="text-lg font-semibold">
@@ -287,11 +284,13 @@ function Home() {
                             </span>
                           </li>
                         </ul>
-                        <p>The versions have evolved over the there are</p>
+                        <p>{product.description}</p>
                       </div>
                     </div>
                   ))}
-                  <button className="text-xs px-4 py-2 border-2 mt-2 ml-4 border-Secondary-theme">
+                </div>
+                <div className="pt-4 pb-2 flex">
+                  <button className="text-xs px-4 py-2 border-2 border-Secondary-theme mx-auto">
                     GET AN APPOINTMENT
                   </button>
                 </div>
@@ -312,17 +311,16 @@ function Home() {
             <div className="flex items-center gap-6 max-[920px]:inline ">
               <div className="bg-white h-full w-full ">
                 <div className="px-6 py-5 text-lg w-full h-full">
-                  “ It is a long established fact
-                  that a reader will be tracked distracted by the readable content of a page is when looking at its layout.
-                  The point of using Lorem of distribution it look like readable English “
+                  “I walked in nervous about my wedding makeup and walked out feeling like myself—only more radiant.
+                  The artist matched my foundation perfectly and the look lasted all night.“
                 </div>
                 <div className="bg-Intermediary-theme flex justify-between p-3">
                   <div className="flex">
                     <img className="object-contain h-16 w-16" src="/contentImage/malereviewer.jpg" alt="" />
                     <div className="pl-1 pt-1">
                       <img className="object-contain" src="/contentImage/Reviews.png" alt="" />
-                      <p className="text-sm text-white">Gwen Stacy</p>
-                      <p className="text-sm text-white">United States</p>
+                      <p className="text-sm text-white">Ada Nwosu</p>
+                      <p className="text-sm text-white">Lagos, Nigeria</p>
                     </div>
                   </div>
                   <div className="pt-1 pr-1">
@@ -332,18 +330,16 @@ function Home() {
               </div>
               <div className="bg-white h-full w-full max-[920px]:mt-5">
                 <div className="px-6 py-5 text-lg w-full h-full">
-                  <p>“ It is a long established fact
-                    that a reader will be tracked distracted by the readable content of a
-                    page is when looking at its layout.
-                    The point of using Lorem of distribution it look like readable English “</p>
+                  <p>“I have tried countless salons, but House of Iyanga is different. Soft glam for my anniversary dinner,
+                    flawless eyebrows, and they actually listened to what I wanted.“</p>
                 </div>
                 <div className="bg-Intermediary-theme flex justify-between p-3">
                   <div className="flex">
                     <img className="object-contain h-16 w-16" src="/contentImage/femaleReviewer.jpg" alt="" />
                     <div className="pl-1 pt-1">
                       <img className="object-contain" src="/contentImage/Reviews.png" alt="" />
-                      <p className="text-sm text-white">Gwen Stacy</p>
-                      <p className="text-sm text-white">United States</p>
+                      <p className="text-sm text-white">Chioma Eze</p>
+                      <p className="text-sm text-white">Abuja, Nigeria</p>
                     </div>
                   </div>
                   <div className="pt-1 pr-1">
@@ -362,8 +358,8 @@ function Home() {
             <div className="max-w-xs mx-auto h-full max-[1190px]:max-w-lg">
               <p className="sm:text-xs max-[639px]:text-lg">FLAT DISCOUNT</p>
               <h2 className="sm:text-3xl max-[639px]:text-4xl font-medium pt-3">Claim up to 50% offer on the most popular <br />services.....</h2>
-              <p className="text-lg pt-3 pb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration in some form, buying to injected humour, or randomised words.</p>
+              <p className="text-lg pt-3 pb-3">Celebrate your next milestone with up to 50% off our most-booked services—bridal packages,
+                full glam sessions, and signature facials. Limited slots available each month, so reserve early to lock in your date.</p>
               <div className="max-[350px]:inline flex justify-between items-center border-2 max-[350px]:border-0 border-Secondary-theme h-28 w-full">
                 <div >
                   <span className="text-lg">Mail us: beautyness@gmail.com</span>

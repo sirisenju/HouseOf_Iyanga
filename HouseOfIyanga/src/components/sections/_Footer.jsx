@@ -1,90 +1,145 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import TypewriterText from "../ui/TypewriterText";
+
+const socialLinks = [
+  { icon: "/socialIcons/facebookWIcon.png", alt: "Facebook", size: "h-4 w-4" },
+  { icon: "/socialIcons/twitterIcon.png", alt: "Twitter", size: "h-4.5 w-4.5" },
+  { icon: "/socialIcons/instagramWIcon.png", alt: "Instagram", size: "h-3.5 w-3.5" },
+  { icon: "/socialIcons/whatsappWIcon.png", alt: "WhatsApp", size: "h-4.5 w-4.5" },
+];
 
 function _Footer() {
   return (
-    <footer className="bg-Footer-theme w-full h-5/6">
-      <div className="max-w-4xl mx-auto w-full">
-        <div className="pt-16 pb-16 sm:flex sm:justify-between max-lg:p-6 border-b-2 grid place-content-center gap-10 w-full">
-          <p className="text-5xl text-white">Beautyness.</p>
-          <div className="flex gap-x-2 justify-center items-center">
-            <div className="h-12 w-12 border-2 border-Secondary-theme flex items-center justify-center">
-              <img
-                className="h-7 w-7 object-contain"
-                src={"/socialIcons/facebookWIcon.png"}
-                alt=""
-              />
-            </div>
-            <div className="h-12 w-12 border-2 border-Secondary-theme flex items-center justify-center">
-              <img
-                className="h-8 w-8 object-contain"
-                src={"/socialIcons/twitterIcon.png"}
-                alt=""
-              />
-            </div>
-            <div className="h-12 w-12 border-2 border-Secondary-theme flex items-center justify-center">
-              <img
-                className="h-6 w-6 object-contain"
-                src={"/socialIcons/instagramWIcon.png"}
-                alt=""
-              />
-            </div>
-            <div className="h-12 w-12 border-2 border-Secondary-theme flex items-center justify-center">
-              <img
-                className="h-8 w-8 object-contain"
-                src={"/socialIcons/whatsappWIcon.png"}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div className="md:flex md:justify-between max-md:grid max-md:grid-cols-3 max-sm:grid-cols-2 max-[420px]:inline max-[540px]:place-content-center max-3sm:pt-4 pt-16 pb-16 px-2 text-white">
-          <div className="max-[420px]:pl-5">
-            <span className="text-xl max-sm:text-2xl font-semibold tracking-wider">
-              Explore
-            </span>
-            <div className="list-none text-base pt-3 max-[420px]:pt-0">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Appointments</li>
-              <li>Contact Us</li>
-            </div>
-          </div>
-          <div className="max-[420px]:pl-5 max-[420px]:pt-4">
-            <span className="text-xl max-sm:text-2xl font-semibold tracking-wider">
-              Utility
-            </span>
-            <div className="list-none text-base pt-3 max-[420px]:pt-0">
-              <li>Start here</li>
-              <li>Catalog</li>
-            </div>
-          </div>
-          <div className="max-[420px]:pl-5 max-[420px]:pt-4">
-            <span className="text-xl max-sm:text-2xl font-semibold tracking-wider">
-              Keep in Touch
-            </span>
-            <div className="list-none text-base pt-3 max-[420px]:pt-0 ">
-              <li>Address: 89, pounds square Ave.</li>
-              <li>mail: amrohore4real@gmail.com</li>
-              <li>Phone: 08053312857</li>
-            </div>
-          </div>
-          <div className="max-[420px]:pl-5 max-[420px]:pt-4">
-            <span className="text-xl max-sm:text-2xl font-semibold tracking-wider">
-              Working Hours
-            </span>
-            <div className="list-none text-base pt-3 max-[420px]:pt-0">
-              <li>Mon to Fri: 7am-6pm</li>
-              <li>Sat: 9am-7pm</li>
-              <li>Sun: 9am-6pm</li>
-            </div>
-          </div>
-        </div>
+    <footer className="bg-Intermediary-theme w-full overflow-hidden text-white font-playfairDisplay">
+      {/* Huge Background Text "IYANGA" */}
+      <div className="w-full text-center select-none pt-12 md:pt-16 lg:pt-20 overflow-hidden">
+        <h1 className="font-playfairDisplay font-medium text-white/[0.08] tracking-normal leading-none text-[clamp(6rem,24vw,36rem)] select-none flex justify-center items-center w-full">
+          <TypewriterText text="IYANGA" speed={160} />
+        </h1>
       </div>
-      <div className="flex items-center justify-center bg-Intermediary-theme w-full h-16 border-t-2">
-        <p className="font-manrope text-xs font-thin text-white">
-          Copyright 2021. Drafted by Victor Themes. Powered by ROOT.
-        </p>
+
+      {/* Grid Content */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pb-16 pt-8 md:pt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 lg:gap-12">
+          
+          {/* Column 1: Branding, Socials & Copyright */}
+          <div className="flex flex-col space-y-6 justify-between h-full">
+            <div>
+              <h3 className="font-playfairDisplay text-lg md:text-xl font-bold tracking-wide uppercase text-white">
+                HOUSE OF IYANGA.
+              </h3>
+              
+              {/* Social Icons */}
+              <div className="flex gap-2.5 mt-5">
+                {socialLinks.map((social) => (
+                  <div
+                    key={social.alt}
+                    className="h-10 w-10 border border-white/20 hover:border-white/60 hover:bg-white/5 transition-all flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      className={`${social.size} object-contain opacity-80 hover:opacity-100 transition-opacity`}
+                      src={social.icon}
+                      alt={social.alt}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-xs text-white/40 leading-relaxed pt-2">
+              <p>© 2021 House of Iyanga.</p>
+              <p>Powered by ROOT.</p>
+            </div>
+          </div>
+
+          {/* Column 2: Explore */}
+          <div>
+            <h4 className="font-playfairDisplay text-base md:text-lg font-medium text-white mb-5">
+              Explore
+            </h4>
+            <ul className="space-y-3 text-sm text-white/50">
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link to="/service" className="hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="hover:text-white transition-colors">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Utility */}
+          <div>
+            <h4 className="font-playfairDisplay text-base md:text-lg font-medium text-white mb-5">
+              Utility
+            </h4>
+            <ul className="space-y-3 text-sm text-white/50">
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Start here
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Style Guide
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Keep in Touch */}
+          <div>
+            <h4 className="font-playfairDisplay text-base md:text-lg font-medium text-white mb-5">
+              Keep in Touch
+            </h4>
+            <ul className="space-y-3 text-sm text-white/50 leading-relaxed">
+              <li className="hover:text-white transition-colors cursor-default">
+                89, Pounds Square Ave.
+              </li>
+              <li>
+                <a
+                  href="mailto:amrohore4real@gmail.com"
+                  className="hover:text-white transition-colors"
+                >
+                  amrohore4real@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:08053312857"
+                  className="hover:text-white transition-colors"
+                >
+                  08053312857
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </footer>
   );
