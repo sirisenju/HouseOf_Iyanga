@@ -1,101 +1,114 @@
 import React from "react";
 import _Header from "../sections/_Header";
 import _Footer from "../sections/_Footer";
+import { useReservation } from "../../context/ReservationContext";
 
 function About() {
+  const { openModal } = useReservation();
+
   return (
     <section>
       <_Header />
       <main className="pt-[80px]">
-        {/**First section start.......................................................... */}
+
+        {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="w-full">
           <div
-            className="w-full h-[280px] flex justify-center items-center"
+            className="w-full min-h-[300px] md:min-h-[360px] flex justify-center items-center bg-cover bg-center relative"
             style={{ backgroundImage: "url('/contentImage/bgImg1.jpg')" }}
           >
-            <div className="max-w-xl mx-auto text-center">
-              <p className="text-xs text-white">SHORT STORY ABOUT US.</p>
-              <h2 className="font-medium text-3xl pt-6 pb-6 text-white">
-                THE BIG STORY BEHIND HOUSE OF IYANGA
+            <div className="absolute inset-0 bg-black/45" />
+            <div className="relative z-10 max-w-xl mx-auto text-center px-6">
+              <p className="text-xs text-white/80 tracking-widest uppercase">Short Story About Us.</p>
+              <h2 className="font-medium text-2xl md:text-3xl pt-5 pb-6 text-white leading-snug">
+                The Big Story Behind House of Iyanga
               </h2>
-              <button className="px-6 py-2 bg-Primary-theme text-white text-sm">
+              <button
+                onClick={() => openModal()}
+                className="px-6 py-2 bg-Primary-theme text-white text-sm hover:bg-Secondary-theme transition-colors"
+              >
                 MAKE A RESERVATION
               </button>
             </div>
           </div>
         </section>
-        {/**First section end.......................................................... */}
 
-        {/**second section start.......................................................... */}
-        <section className="w-full h-[75vh] flex justify-center items-center bg-Home-bg">
-          <div className="max-w-xl mx-auto p-5">
-            <p className="text-sm text-center text-Primary-theme">
-              OUR VALUES.
+        {/* ── VALUES ───────────────────────────────────────────────────────── */}
+        <section className="w-full bg-Home-bg py-16 px-4">
+          <div className="max-w-xl mx-auto">
+            <p className="text-sm text-center text-Primary-theme tracking-widest uppercase mb-2">
+              Our Values.
             </p>
-            <h2 className="font-medium text-3xl pl-4">
+            <h2 className="font-medium text-2xl md:text-3xl pl-2 mb-8">
               The work values we thrive for.
             </h2>
-            <div className="max-w-md h-full flex mb-4 mt-6 border-b-2 border-gray-300">
+
+            <div className="flex items-start gap-4 mb-6 pb-6 border-b border-gray-300">
               <img
-                className="h-20 w-24 object-contain"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain shrink-0"
                 src="/contentImage/beautyExperts.png"
-                alt=""
+                alt="Beauty Experts"
               />
-              <div className="pl-2 pb-6">
-                <h3 className="font-medium text-xl pt-1">Beauty Experts.</h3>
-                <p className="text-sm pt-2">
-                  Our certified makeup artists and estheticians stay current on trends,
-                  techniques, and products—bringing runway-quality artistry to every appointment.
+              <div>
+                <h3 className="font-medium text-lg md:text-xl">Beauty Experts.</h3>
+                <p className="text-sm pt-2 leading-relaxed text-gray-600">
+                  Our certified makeup artists stay current on trends, techniques, and products —
+                  bringing runway-quality artistry to every appointment.
                 </p>
               </div>
             </div>
-            <div className="max-w-md h-full flex mb-4 border-b-2 border-gray-300">
+
+            <div className="flex items-start gap-4 mb-6 pb-6 border-b border-gray-300">
               <img
-                className="h-20 w-24 object-contain"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain shrink-0"
                 src="/contentImage/greatServices.png"
-                alt=""
+                alt="Great Services"
               />
-              <div className="pl-2 pb-6">
-                <h3 className="font-medium text-xl pt-1">Great Services.</h3>
-                <p className="text-sm pt-2">
+              <div>
+                <h3 className="font-medium text-lg md:text-xl">Great Services.</h3>
+                <p className="text-sm pt-2 leading-relaxed text-gray-600">
                   From consultation to final touch-up, we deliver attentive, hygienic service
                   in a calm, welcoming space designed for your comfort.
                 </p>
               </div>
             </div>
-            <div className="max-w-md h-full flex border-b-2 border-gray-300">
+
+            <div className="flex items-start gap-4 pb-6 border-b border-gray-300">
               <img
-                className="h-20 w-24 object-contain"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain shrink-0"
                 src="/contentImage/genuein.png"
-                alt=""
+                alt="Genuine Care"
               />
-              <div className="pl-2 pb-6">
-                <h3 className="font-medium text-xl pt-1">Genuine Care.</h3>
-                <p className="text-sm pt-2">
-                  We use only trusted, dermatologist-approved products and honest recommendations—
+              <div>
+                <h3 className="font-medium text-lg md:text-xl">Genuine Care.</h3>
+                <p className="text-sm pt-2 leading-relaxed text-gray-600">
+                  We use only trusted, dermatologist-approved products and honest recommendations —
                   never upselling, always what your skin actually needs.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        {/**second section end.......................................................... */}
 
-        {/**third section start.......................................................... */}
-        <section className="w-full h-[75vh] flex justify-center items-center relative">
-          <div className="bg-Footer-theme max-w-3xl h-1/2 flex">
-            <img
-              className="h-[360px] w-[280px] object-cover absolute top-[17%] ml-14"
-              src="/contentImage/aboutModel.jpg"
-              alt=""
-            />
-            <div className="w-1/2 ml-auto flex justify-center items-center">
-              <div className="pr-4 pl-2 text-white">
-                <p className="text-sm">ABOUT US</p>
-                <h2 className="font-medium text-3xl pt-2 pb-3">
-                  Style is a Reflection of your Attitude & your Personality.
+        {/* ── ABOUT SPLIT ──────────────────────────────────────────────────── */}
+        <section className="w-full bg-Footer-theme">
+          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row">
+            {/* Image */}
+            <div className="w-full lg:w-1/2 h-72 sm:h-96 lg:h-[500px] overflow-hidden">
+              <img
+                className="w-full h-full object-cover object-top"
+                src="/galleryImages/img4.jpeg"
+                alt="House of Iyanga artistry"
+              />
+            </div>
+            {/* Text */}
+            <div className="w-full lg:w-1/2 flex items-center px-8 md:px-12 py-12 lg:py-16">
+              <div className="text-white max-w-md">
+                <p className="text-xs tracking-widest uppercase text-white/60 mb-3">About Us</p>
+                <h2 className="font-medium text-2xl md:text-3xl pb-4 leading-snug">
+                  Style is a Reflection of your Attitude &amp; your Personality.
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm leading-relaxed text-white/80">
                   Founded on the belief that every woman deserves to feel stunning in her own skin,
                   House of Iyanga blends African beauty traditions with modern makeup artistry.
                   Our studio is a space where color, confidence, and craftsmanship come together.
@@ -104,112 +117,113 @@ function About() {
             </div>
           </div>
         </section>
-        {/**third section end.......................................................... */}
 
-        {/**fourth section start.......................................................... */}
-        <section className="w-full bg-Home-bg h-[90vh] ">
-          <div className="text-center pt-7">
-            <p className="text-sm pb-2">MEET THE CEO.</p>
-            <h2 className="text-4xl font-medium">
+        {/* ── MEET THE CEO ─────────────────────────────────────────────────── */}
+        <section className="w-full bg-Home-bg py-14 px-4">
+          <div className="text-center mb-10 px-2">
+            <p className="text-sm pb-2 tracking-widest uppercase">Meet The CEO.</p>
+            <h2 className="text-3xl md:text-4xl font-medium leading-snug">
               The Amazing woman behind the brand.
             </h2>
           </div>
-          <div className="flex justify-center pt-10">
-            <div className="max-w-3xl flex">
-              <img
-                className="h-full w-[340px] object-cover"
-                src="/contentImage/aboutModel.jpg"
-                alt=""
-              />
-              <div className="w-full pl-12 pr-4 pt-4">
-                <h3 className="text-sm">FOUNDER, HOUSE OF IYANGA</h3>
-                <p className="pt-2 pb-2 font-medium text-4xl">Sherlin D’Cruz</p>
-                <p className="pb-3 text-md">
-                  Sherlin founded House of Iyanga with one mission: to make professional makeup artistry
-                  accessible, personal, and unforgettable. With over a decade of experience in bridal glam,
-                  editorial shoots, and everyday beauty, she leads a team dedicated to enhancing—not masking—your natural features.
-                </p>
-                <div className="flex gap-4">
-                  <img
-                    className="h-12 w-12 object-contain"
-                    src="/contentImage/Call.png"
-                    alt=""
-                  />
-                  <p>09087876565</p>
-                </div>
-                <div className="flex pt-4 pb-4 gap-4">
-                  <img
-                    className="h-12 w-12 object-contain"
-                    src="/contentImage/mail.png"
-                    alt=""
-                  />
-                  <p className="">amrohore4real@gmail.com</p>
-                </div>
-                <button className="px-5 py-2 bg-slate-400">
-                  MAKE A RESERVATION
-                </button>
-                <div className="flex gap-4 pt-4 pb-3">
-                  <img
-                    className="object-contain h-4 w-4"
-                    src="/contentImage/f.png"
-                    alt=""
-                  />
-                  <img
-                    className="object-contain h-4 w-4"
-                    src="/contentImage/twit.png"
-                    alt=""
-                  />
-                  <img
-                    className="object-contain h-4 w-4"
-                    src="/contentImage/in.png"
-                    alt=""
-                  />
-                </div>
+
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row">
+            <img
+              className="w-full md:w-[300px] lg:w-[340px] h-72 md:h-auto object-cover object-top shrink-0"
+              src="/contentImage/aboutModel.jpg"
+              alt="Sherlin D'Cruz"
+            />
+            <div className="w-full pt-8 md:pt-4 md:pl-10 lg:pl-12 pr-2">
+              <h3 className="text-xs tracking-widest uppercase text-gray-500">Founder, House of Iyanga</h3>
+              <p className="pt-2 pb-3 font-medium text-3xl md:text-4xl">Sherlin D&rsquo;Cruz</p>
+              <p className="pb-5 text-sm md:text-base leading-relaxed text-gray-600 max-w-md">
+                Sherlin founded House of Iyanga with one mission: to make professional makeup artistry
+                accessible, personal, and unforgettable. With over a decade of experience in bridal glam,
+                editorial shoots, and everyday beauty, she leads a team dedicated to enhancing — not masking —
+                your natural features.
+              </p>
+
+              <div className="flex items-center gap-3 mb-3">
+                <img className="h-8 w-8 object-contain shrink-0" src="/contentImage/Call.png" alt="Phone" />
+                <a href="tel:08053312857" className="text-sm hover:text-Secondary-theme transition-colors">
+                  08053312857
+                </a>
+              </div>
+              <div className="flex items-center gap-3 mb-6">
+                <img className="h-8 w-8 object-contain shrink-0" src="/contentImage/mail.png" alt="Email" />
+                <a href="mailto:Bookiyanga@gmail.com" className="text-sm hover:text-Secondary-theme transition-colors break-all">
+                  Bookiyanga@gmail.com
+                </a>
+              </div>
+
+              <button
+                onClick={() => openModal()}
+                className="px-5 py-2 bg-Secondary-theme text-white text-sm hover:bg-Primary-theme transition-colors mb-5"
+              >
+                MAKE A RESERVATION
+              </button>
+
+              <div className="flex gap-4 pt-2">
+                <img className="object-contain h-4 w-4" src="/contentImage/f.png" alt="Facebook" />
+                <img className="object-contain h-4 w-4" src="/contentImage/twit.png" alt="Twitter" />
+                <img className="object-contain h-4 w-4" src="/contentImage/in.png" alt="Instagram" />
               </div>
             </div>
           </div>
         </section>
-        {/**fourth section end.......................................................... */}
 
-        {/**fifth section start.......................................................... */}
-        <section className="h-[110vh] w-full">
-          <div className="max-w-3xl mx-auto flex mt-20">
-            <div className="max-w-sm h-full pb-6">
-              <p className="pt-3 text-sm">SHARE US</p>
-              <h2 className="pt-3 pb-3 text-4xl font-medium">
-                Follow us on <br /> Instagram.
+        {/* ── INSTAGRAM / GALLERY ──────────────────────────────────────────── */}
+        <section className="w-full py-16 px-4">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 md:gap-6">
+
+            {/* Left column — text + tall image */}
+            <div className="w-full md:w-[320px] shrink-0">
+              <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">Share Us</p>
+              <h2 className="text-3xl md:text-4xl font-medium pb-4 leading-snug">
+                Follow us on <br className="hidden md:block" /> Instagram.
               </h2>
-              <p className="pb-10 text-md pr-3">
+              <p className="pb-8 text-sm leading-relaxed text-gray-500 max-w-sm">
                 See our latest bridal transformations, soft glam looks, and behind-the-scenes studio moments.
-                Tag us in your photos—we love celebrating your glow-up with our community.
+                Tag us in your photos — we love celebrating your glow-up with our community.
               </p>
-
-              <img
-                className="h-96 object-contain"
-                src="/contentImage/candles.jpg"
-                alt=""
-              />
+              <div className="overflow-hidden h-64 md:h-80">
+                <img
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  src="/galleryImages/img7.jpeg"
+                  alt="House of Iyanga"
+                />
+              </div>
             </div>
-            <div className="max-w-lg">
-              <img
-                className="h-[60%] object-cover pb-7"
-                src="/contentImage/massageTable.png"
-                alt=""
-              />
-              <img
-                className=" h-[40%] object-cover"
-                src="/contentImage/massageBack.jpg"
-                alt=""
-              />
+
+            {/* Right column — two stacked images */}
+            <div className="flex-1 flex flex-col gap-4 bg-red-500 w-full h-full">
+              <div className="overflow-hidden h-60 md:h-[35%]">
+                <img
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  src="/galleryImages/img9.jpeg"
+                  alt="House of Iyanga"
+                />
+              </div>
+              <div className="overflow-hidden h-52 md:h-[40%]">
+                <img
+                  className="w-full h-full md:h-[330px] object-cover object-center hover:scale-105 transition-transform duration-700"
+                  src="/galleryImages/img12.jpeg"
+                  alt="House of Iyanga"
+                />
+              </div>
             </div>
           </div>
-          <div className="text-center pt-8">
-            <button className=" bg-Primary-theme px-10 py-2 text-white">
-              Contact Us
+
+          <div className="text-center pt-12">
+            <button
+              onClick={() => openModal()}
+              className="bg-Primary-theme px-10 py-2.5 text-white text-sm hover:bg-Secondary-theme transition-colors"
+            >
+              Contact Us here
             </button>
           </div>
         </section>
-        {/**fifth section end.......................................................... */}
+
       </main>
       <_Footer />
     </section>

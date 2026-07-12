@@ -17,7 +17,7 @@ function _Header() {
 
   return (
     <header className="bg-white/90 backdrop-blur-md flex justify-between items-center px-7 w-full h-20 z-30 fixed border-b-2 border-Footer-theme">
-      <Link to="/" className="text-3xl md:text-5xl font-medium">HOUSE OF IYANGA.</Link>
+      <Link to="/" className="text-3xl md:text-3xl font-medium">HOUSE OF IYANGA.</Link>
       <div className="hidden md:flex">
         <div className="flex justify-center items-center mr-7 gap-6">
           {links.map((link) => (
@@ -37,8 +37,8 @@ function _Header() {
           ))}
         </div>
         <button
-          className="bg-Primary-theme px-7 py-1 font-manrope"
-          onClick={openModal}
+          className="bg-Primary-theme px-7 py-1 font-manrope hover:bg-Secondary-theme transition-colors"
+          onClick={() => openModal()}
         >
           RESERVATION
         </button>

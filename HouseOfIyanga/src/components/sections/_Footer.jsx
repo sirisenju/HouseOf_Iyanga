@@ -118,14 +118,14 @@ function _Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-white/50 leading-relaxed">
               <li className="hover:text-white transition-colors cursor-default">
-                89, Pounds Square Ave.
+                8 Onochie Lane, by Wema Bank, Nnebisi Road, Asaba, Delta State.
               </li>
               <li>
                 <a
-                  href="mailto:amrohore4real@gmail.com"
+                  href="mailto:Bookiyanga@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  amrohore4real@gmail.com
+                  Bookiyanga@gmail.com
                 </a>
               </li>
               <li>

@@ -1,7 +1,9 @@
 import React from "react";
-import { FaBeer, FaCheckCircle, FaCheckDouble, FaRegCheckCircle } from "react-icons/fa"
+import { FaRegCheckCircle } from "react-icons/fa";
+import { useReservation } from "../../context/ReservationContext";
 
 function AppointmentPage() {
+  const { openModal } = useReservation();
   return (
     <main className="pt-[80px]">
       {/**first section starts........................................................*/}
@@ -15,7 +17,10 @@ function AppointmentPage() {
             <h2 className="font-medium text-3xl pt-6 pb-6 text-white">
               THE BIG STORY BEHIND HOUSE OF IYANGA
             </h2>
-            <button className="px-6 py-2 bg-Primary-theme text-white text-sm">
+            <button
+              onClick={() => openModal()}
+              className="px-6 py-2 bg-Primary-theme text-white text-sm hover:bg-Secondary-theme transition-colors"
+            >
               MAKE A RESERVATION
             </button>
           </div>
@@ -53,7 +58,7 @@ function AppointmentPage() {
             </div>
           </div>
           <div className="w-full md:w-[40%] min-h-[400px] md:min-h-full">
-            <img className="object-cover h-full w-full" src="/contentImage/faceMask1.jpg" alt="" />
+            <img className="object-cover h-full w-full" src="/galleryImages/img8.jpeg" alt="" />
           </div>
         </div>
       </section>
